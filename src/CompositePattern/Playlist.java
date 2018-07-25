@@ -14,17 +14,12 @@ public class Playlist implements IComponent {
     }
     public void add(IComponent component)
     {
-        if (component instanceof Playlist)
-        {
-            playlist.addAll(((Playlist) component).playlist);
-        }
-        else
-        {
-            playlist.add(component);
-        }
+        playlist.add(component);
     }
     public void remove(IComponent component)
-    {}
+    {
+        playlist.remove(component);
+    }
     public String getName()
     {
         return this.playlistName;
